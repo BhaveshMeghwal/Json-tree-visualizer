@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 JSON Tree Visualizer
 
-## Getting Started
+An interactive web app built with **Next.js**, **React Flow**, and **Tailwind CSS** that helps you quickly visualize and explore JSON data in a tree-style graph. Search, navigate, and copy JSON paths with a single click — perfect for debugging APIs and working with deeply nested data.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Features
+
+- ✅ **Interactive Tree View** — Visualize JSON as connected nodes and edges for easier structure comprehension.
+- ✅ **Path Search** — Find nodes by JSON path (for example: `$.user.address.city`) and highlight them in the graph.
+- ✅ **Path Copy** — Click any node to copy its exact JSON path to the clipboard.
+- ✅ **Dark / Light Mode** — Toggle between themes to match your environment.
+- ✅ **Responsive** — Layout adapts for desktop and tablet screens.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **Next.js 14** | App structure & rendering |
+| **React Flow** | Visualizing nodes and edges |
+| **Tailwind CSS** | Styling and responsive design |
+| **TypeScript** | Type safety and clearer code |
+
+---
+
+## ⚙️ Installation & Setup
+
+
+```powershell
+# 1️⃣ Clone the repository
+git clone https://github.com/BhaveshMeghwal/json-tree-visualizer.git
+
+# 2️⃣ Move into the project folder
+cd json-tree-visualizer
+
+# 3️⃣ Install dependencies
+npm install
+
+# 4️⃣ Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Then open http://localhost:3000 in your browser
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If you use yarn or pnpm, replace `npm install` and `npm run dev` with `yarn`/`yarn dev` or `pnpm install`/`pnpm dev`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧭 Usage
 
-## Learn More
+1. Paste or load JSON in the input area.
+2. The app renders an interactive tree where each key/value is a node.
+3. Use the search bar to jump to a node by JSON path.
+4. Click a node to copy its JSON path to the clipboard.
 
-To learn more about Next.js, take a look at the following resources:
+Tip: Start with small JSON snippets while exploring; large payloads render progressively but may require more memory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Configuration & Development
 
-## Deploy on Vercel
+- The app uses React Flow for graph rendering and custom node components located in `app/components/`.
+- Tailwind configuration is in `tailwind.config.js`.
+- TypeScript config is in `tsconfig.json`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To add or extend features:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create/update components in `app/components/`.
+2. Add styles in `app/globals.css` or Tailwind config.
+3. Run the dev server and test in-browser.
+
+
